@@ -1,4 +1,7 @@
 #An AI that classifies Tweets to see if they're about actual disasters or not.
+
+
+
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 from sklearn.ensemble import RandomForestClassifier
@@ -9,20 +12,25 @@ from keras.models import Sequential
 from keras.layers import Flatten, Dense
 
 ##eliminating spaces
+
 #df= pd.read_csv("/kaggle/input/nlp-getting-started/train.csv", delimiter=',', header=None, skiprows=1, names=['id','keyword', 'location', 'text','target' ])
 
 #from sklearn.model_selection import train_test_split
 #train = train_test_split(df)
 #test = train_test_split(pd.read_csv("/kaggle/input/nlp-getting-started/test.csv"))
+
 features = train[['keyword', 'location', 'text']]
 target='target'
 
 #train = pd.read_csv('/kaggle/input/nlp-getting-started/train.csv')
 #test = pd.read_csv('/kaggle/input/nlp-getting-started/test.csv')
 
+
+#different form of one-hot encoding
 #trainht = pd.get_dummies(train)
 #testht = pd.get_dummies(test)
 
+#another way of one-hot encoding
 embedding_layer = Embedding(1000, 64)
 max_features = 10000 #number of words to consider as features
 maxlen = 20 #cuts off the text after this many words from the max_features most common words
