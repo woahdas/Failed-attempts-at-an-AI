@@ -8,7 +8,7 @@ from keras import preprocessing
 from keras.models import Sequential
 from keras.layers import Flatten, Dense
 
-##eliminating spaces
+##eliminating spaces, this didn't work but I figured I might as well as put it here as a note for myself later incase I need to look back at previous AI for help.
 
 #df= pd.read_csv("/kaggle/input/nlp-getting-started/train.csv", delimiter=',', header=None, skiprows=1, names=['id','keyword', 'location', 'text','target' ])
 
@@ -23,7 +23,7 @@ target='target'
 #test = pd.read_csv('/kaggle/input/nlp-getting-started/test.csv')
 
 
-#different form of one-hot encoding
+#different form of one-hot encoding, which could be helpful later when I make AI and look through these for help.
 #trainht = pd.get_dummies(train)
 #testht = pd.get_dummies(test)
 
